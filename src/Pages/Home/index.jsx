@@ -30,10 +30,9 @@ export default function Home() {
 
           {mindHabit ? (
             <EditHabit
-              habit={"Habito 01"}
-              frequency={"Todo dia de 10:30"}
-              habitArea={"Mente"}
-              checkColor="#90B7F3"
+            habit={mindHabit?.habitName}
+            frequency={`${mindHabit?.habitTime} - ${mindHabit?.habitFrequency}`}
+            habitArea={mindHabit?.habitArea}
             />
           ) : (
             <CreateHabit habitArea="Mente" borderColor="#90B7F3" />
