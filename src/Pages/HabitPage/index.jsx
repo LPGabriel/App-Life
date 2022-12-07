@@ -9,9 +9,11 @@ import {
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
+import SelectHabit from "../../Components/Common/HabitPage/SelectHabit";
 
 export default function HabitPage({ route }) {
 	const navigation = useNavigation();
+  const [habitInput, setHabitInput] = useState();
 
 	const { create, habit } = route.params;
 
@@ -19,6 +21,7 @@ export default function HabitPage({ route }) {
     <View style={styles.container}>
       <ScrollView>
         <View>
+
           <TouchableOpacity
             style={styles.bakcPageBtn}
             onPress={() => navigation.goBack()}
@@ -28,6 +31,7 @@ export default function HabitPage({ route }) {
               style={styles.arrowBack}
             />
           </TouchableOpacity>
+
           <View style={styles.mainContent}>
             <Text style={styles.title}>Configurações {"\n"} de hábito</Text>
             <Text style={styles.inputText}>Área</Text>
@@ -35,6 +39,10 @@ export default function HabitPage({ route }) {
               <Text style={styles.area}>{habit?.habitArea}</Text>
             </View>
           </View>
+
+          <Text style={styles.inputText}>Hábito</Text>
+            <SelectHabit habit={habit} habitInput={setHabitInput} />
+
         </View>
       </ScrollView>
     </View>
