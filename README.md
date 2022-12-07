@@ -20,4 +20,4 @@ Marcar a tarefa como concluída
 
 
 ## ⏳ Inicialização
-Esse projeto foi desenvolvido em ambiente Linux, utilizando o Ubuntu 22 e as tecnologias citadas anteriormente. Utilizamos o Expo, como fremework do React Native e o Visual Studio Code como editor de códigos no desenvolvimento. Para fazer a pré-visualização do projeto, utilizamos o Android Studio.
+Esse projeto foi desenvolvido em ambiente Linux, utilizando o windows e as tecnologias citadas anteriormente. Utilizei o Expo, como fremework do React Native e o Visual Studio Code como editor de códigos no desenvolvimento. Para fazer a pré-visualização do projeto, utilizei o Android Studio.
