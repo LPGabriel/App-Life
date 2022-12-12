@@ -24,7 +24,7 @@ export default function TimeDatePicker({
     const [selected, setSelected] = useState("-");
 
     const [notificationDate, setNotificationDate] = useState();
-	const [notificationTime, setNotificationTime] = useState();
+	  const [notificationTime, setNotificationTime] = useState();
 
     const onChange = (_, selectedDate) => {
 						    const currentDate = selectedDate || date;
