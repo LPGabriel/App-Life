@@ -7,6 +7,7 @@ import StatusBar from "../../Components/Common/Home/StatusBar";
 import CreateHabit from "../../Components/Common/Home/CreateHabit";
 import EditHabit from "../../Components/Common/Home/EditHabit";
 import ChangeNavigationService from "../../Service/ChangeNavigation";
+import HabitsService from "../../Service/HabitService";
 
 
 export default function Home({route}) {
@@ -24,6 +25,20 @@ export default function Home({route}) {
   }
 
   useEffect(() => {
+
+    HabitsService.findByArea("Mente").then((mind) => {
+      setMindHabit(mind[0]);
+    });
+    HabitsService.findByArea("Financeiro").then((money) => {
+      setMoneyHabit(money[0]);
+    });
+    HabitsService.findByArea("Corpo").then((body) => {
+      setBodyHabit(body[0]);
+    });
+    HabitsService.findByArea("Humor").then((fun) => {
+      setFunHabit(fun[0]);
+    });
+
     ChangeNavigationService.checkShowHome(1)
     .then((showHome) => {
       const formDate = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
