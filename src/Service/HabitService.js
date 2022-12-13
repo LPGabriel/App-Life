@@ -1,4 +1,4 @@
-import db from "../Database";
+import db from "../DataBase";
 
 const createHabit = (obj) => {
   return new Promise((resolve, reject) => {
